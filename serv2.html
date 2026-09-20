@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<title>Ikon Smart Solutions - Best Sewage Treatment Plant Company</title>
+
+<!-- Fav Icon -->
+<link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&amp;display=swap" rel="stylesheet">
+
+<!-- Stylesheets -->
+<link href="assets/css/font-awesome-all.css" rel="stylesheet">
+<link href="assets/css/flaticon.css" rel="stylesheet">
+<link href="assets/css/owl.css" rel="stylesheet">
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/jquery.fancybox.min.css" rel="stylesheet">
+<link href="assets/css/animate.css" rel="stylesheet">
+<link href="assets/css/nice-select.css" rel="stylesheet">
+<link href="assets/css/color.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/responsive.css" rel="stylesheet">
+
+<style>
+    /* Custom Styles */
+    .wireframe-placeholder {
+        border: 2px dashed #999;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f9f9f9;
+        color: #666;
+        font-weight: bold;
+        min-height: 250px;
+        width: 100%;
+    }
+    
+    .hero-buttons .theme-btn, .custom-buttons .theme-btn {
+        margin: 0 10px 10px 0;
+        border-radius: 25px;
+        border: 1px solid #333;
+        background: transparent;
+        color: #333;
+        display: inline-block;
+    }
+    .hero-buttons .theme-btn:hover, .custom-buttons .theme-btn:hover {
+        background: #333;
+        color: #fff;
+    }
+
+    .custom-table { width: 100%; margin-bottom: 30px; border-collapse: collapse; }
+    .custom-table th, .custom-table td { border: 1px solid #333; padding: 12px; text-align: left; }
+    .custom-table th { background-color: #f4f4f4; color: #333; font-weight: bold; }
+    
+    .table-orange-header th {
+        background-color: #f39c12 !important;
+        color: #000;
+        text-align: center;
+    }
+    .table-orange-header td { text-align: center; }
+
+    .gallery-container {
+        background-color: #eaf3fd;
+        border: 3px solid #f1c40f; 
+        padding: 40px 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+        width: 100%;
+    }
+    
+    .gallery-item { text-align: center; margin-bottom: 20px; }
+    .gallery-item img {
+        width: 100%; height: 120px; object-fit: cover;
+        border: 1px solid #ccc; background-color: #fff;
+    }
+    .gallery-item p { font-size: 12px; margin-top: 8px; line-height: 1.2; color: #333; }
+
+    /* Vertical Tabs Styling */
+    .vertical-tabs .nav-pills .nav-link {
+        border-radius: 0;
+        border-left: 4px solid transparent;
+        color: #555;
+        text-align: left;
+        padding: 15px 20px;
+        font-weight: 600;
+        background: #f9f9f9;
+        margin-bottom: 8px;
+        border: 1px solid #eee;
+    }
+    .vertical-tabs .nav-pills .nav-link.active {
+        background: #fff;
+        border-left-color: #e74c3c;
+        color: #e74c3c;
+        border-top: 1px solid #eee;
+        border-right: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .vertical-tabs .tab-content {
+        padding: 30px;
+        background: #fff;
+        border: 1px solid #eee;
+        min-height: 100%;
+        border-radius: 5px;
+    }
+
+    /* Process Steps Styling */
+    .step-card {
+        background: #fff;
+        border: 1px solid #eee;
+        border-top: 4px solid #f39c12;
+        padding: 30px 20px;
+        border-radius: 5px;
+        height: 100%;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    }
+    .step-card:hover {
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        transform: translateY(-5px);
+    }
+    .step-number {
+        font-size: 40px;
+        font-weight: 900;
+        color: #f39c12;
+        opacity: 0.3;
+        margin-bottom: 15px;
+        line-height: 1;
+    }
+
+    /* FAQ Accordion Styling */
+    .faq-accordion .card {
+        border: none;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 10px;
+    }
+    .faq-accordion .card-header {
+        background-color: #fff;
+        border: none;
+        padding: 0;
+    }
+    .faq-accordion .btn-link {
+        color: #333;
+        font-weight: 600;
+        font-size: 18px;
+        text-align: left;
+        width: 100%;
+        padding: 15px 20px;
+        text-decoration: none;
+        background: #f9f9f9;
+        border-radius: 5px;
+    }
+    .faq-accordion .btn-link:hover, .faq-accordion .btn-link:focus {
+        text-decoration: none;
+        background: #f1f1f1;
+    }
+    .faq-accordion .card-body {
+        padding: 20px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    /* Clients Box */
+    .clients-box {
+        border: 2px solid #0088cc;
+        border-radius: 10px;
+        padding: 30px;
+        background: #fff;
+    }
+
+    .mb-50 { margin-bottom: 50px; }
+    .mt-50 { margin-top: 50px; }
+
+    /* =========================================================
+       SECTION-BASED COLOR SEPARATION
+       ========================================================= */
+    .contact-section {
+        padding-top: 0;
+        padding-bottom: 0;
+        background: #fff;
+    }
+
+    .section-band {
+        --section-bg: #ffffff;
+        background: var(--section-bg);
+        padding: 65px 0;
+        margin: 0;
+        box-shadow: 0 0 0 100vmax var(--section-bg);
+        clip-path: inset(0 -100vmax);
+        position: relative;
+    }
+
+    .section-1  { --section-bg: #ffffff; }
+    .section-2  { --section-bg: #f7f9fc; }
+    .section-3  { --section-bg: #ffffff; }
+    .section-4  { --section-bg: #fff8ed; }
+    .section-5  { --section-bg: #f2f8fd; }
+    .section-6  { --section-bg: #ffffff; }
+    .section-7  { --section-bg: #f4f8fb; }
+    .section-8  { --section-bg: #faf7f2; }
+    .section-9  { --section-bg: #ffffff; }
+    .section-10 { --section-bg: #f4fbff; }
+    .section-11 { --section-bg: #f8f8f8; }
+
+    .section-band .mt-50,
+    .section-band .mb-50 {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .section-1 .row + .row {
+        margin-top: 25px;
+    }
+
+    .section-band h2,
+    .section-band h3,
+    .section-band h4,
+    .section-band p,
+    .section-band table,
+    .section-band ul {
+        position: relative;
+    }
+
+    @media (max-width: 767px) {
+        .section-band { padding: 42px 15px; }
+        .section-band h1 { font-size: 30px !important; line-height: 1.15; }
+        .section-band h2 { line-height: 1.25; }
+        .hero-buttons .theme-btn, .custom-buttons .theme-btn { margin: 5px; }
+        .custom-table { min-width: 620px; font-size: 13px; }
+        .table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .gallery-container { padding: 25px 12px; }
+        .gallery-item img { height: 110px; }
+        .vertical-tabs .nav-pills { margin-bottom: 20px; }
+        .vertical-tabs .tab-content { padding: 22px; }
+        .step-card { padding: 25px 18px; }
+        .clients-box { padding: 22px 12px; }
+    }
+
+</style>
+</head>
+
+<body>
+    <div class="boxed_wrapper">
+
+        <!-- main header -->
+        <header class="main-header">
+            <div class="header-upper">
+                <div class="outer-container">
+                    <div class="left-column">
+                        <figure class="logo-box"><a href="index.html"><img src="assets/images/logo.webp" width="210px" alt=""></a></figure>
+                    </div>
+                    <div class="right-column">
+                        <div class="support-box">
+                            <div class="icon-box"><i class="flaticon-chat-2"></i></div>
+                            <h5><a href="tel:08778627795">+91 87786 27795</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-lower">
+                <div class="outer-container">
+                    <div class="outer-box">
+                        <div class="menu-area clearfix">
+                            <nav class="main-menu navbar-expand-md navbar-light">
+                                <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                                    <ul class="navigation clearfix">
+                                        <li><a href="index.html">Home</a></li> 
+                                        <li><a href="about.html">About Us</a></li> 
+                                        <li class="current"><a href="scope-of-services.html">Scope of Services</a></li>
+                                        <li><a href="contact.php">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Section (Boxed layout - auto-container) -->
+        <section class="contact-section sec-pad">
+            <div class="auto-container">
+                
+                <div class="section-band section-1">
+                <!-- SECTION 1: Hero -->
+                <div class="row align-items-center mb-4">
+                    <div class="col-lg-8 col-md-12 pr-lg-5">
+                        <h1 style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">STP Manufacturer and Supplier</h1>
+                        <h2 style="font-size: 24px; margin-bottom: 20px; color: #555;">Best sewage treatment plant company</h2>
+                        <p style="font-size: 16px;">Ikon Smart Solution is the leading sewage treatment plant manufacturer and supplier in India delivering cost effective fully automated sewage treatment plants to various residential, commercial and industrial sectors.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="wireframe-placeholder">Img</div>
+                    </div>
+                </div>
+                
+                <!-- Centered Buttons -->
+                <div class="row mb-50">
+                    <div class="col-12 text-center hero-buttons">
+                        <a href="tel:+918778627795" class="theme-btn btn-two">Call us</a>
+                        <a href="contact.php" class="theme-btn btn-two">Get a Quote</a>
+                    </div>
+                </div>
+
+
+                </div>
+
+                <div class="section-band section-2">
+                <!-- SECTION 2: About -->
+                <div class="row align-items-center mb-50"> 
+                    <div class="col-lg-4 col-md-5 col-sm-12">
+                        <div class="wireframe-placeholder" style="border-radius: 20px;">Img</div>
+                    </div>
+                    <div class="col-lg-8 col-md-7 col-sm-12 pl-lg-5">
+                        <h2 style="font-size: 28px; margin-bottom: 5px;">About Ikon smart Solution</h2>
+                        <h3 style="font-size: 20px; color: #666; margin-bottom: 20px;">India's Top Rated Sewage Treatment Plant manufacturer (h2)</h3>
+                        <p>Ikon Smart Solutions have 15+ years of expertise in designing, manufacturing, and supplying smart sewage treatment plants ranging from 1KLD to 10MLD across India. We specialize in executing turnkey wastewater treatment plant projects tailored to industrial and commercial needs across India.</p>
+                        <br>
+                        <p>We are ISO certified STP Manufacturing company providing complete end-to-end service from consultation and installation to commissioning and Service for Sewage treatment plant to ensuring treated water meets safe disposal and reuse standards.</p>
+                        <br>
+                        <p>We manufacture and supply fully automated, high-efficiency STP systems based on Sequenced Batch Reactor (SBR) technology, suitable for a wide range of industrial applications. We have installed and executed STP systems across diverse industrial sectors, including pharmaceuticals, textiles, food & beverage, hospitality, healthcare, automotive, chemicals and manufacturing sectors.</p>
+                    </div>
+                </div>
+
+
+                </div>
+
+                <div class="section-band section-3">
+                <!-- SECTION 3: Features Table -->
+                <div class="row mt-50 mb-50">
+                    <div class="col-lg-12">
+                        <h2 style="font-size: 24px; margin-bottom: 15px;">Key Features of Smart Sewage Treatment Plant (STP) (H2)</h2>
+                        <p class="mb-4">As a leading manufacturer and supplier of Advanced Sewage Treatment plants in India, we deliver SBR-based STP systems built for efficiency, automation, and reliable performance.</p>
+                        
+                        <div class="table-responsive">
+                            <table class="custom-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10%;">S/no</th>
+                                        <th style="width: 30%;">Features</th>
+                                        <th style="width: 60%;">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>1</td><td>Advanced SBR Technology</td><td>Uses Sequenced Batch Reactor (SBR) process combines aeration and clarification in a single tank for efficient treatment.</td></tr>
+                                    <tr><td>2</td><td>Fully Automated Operation</td><td>Centralized smart controller manages the entire treatment cycle, reducing dependency on manual monitoring.</td></tr>
+                                    <tr><td>3</td><td>Airlift Technology</td><td>Replaces mechanical pumps for water transfer, sludge removal, and decantation which helps to minimize equipment failure and maintenance needs.</td></tr>
+                                    <tr><td>4</td><td>High Treatment Efficiency</td><td>Achieves treated water quality of BOD &lt; 10 mg/l and COD &lt; 50 mg/l.</td></tr>
+                                    <tr><td>5</td><td>Smart Alarm System</td><td>Digital monitoring detects abnormal functions and triggers alerts for proactive maintenance.</td></tr>
+                                    <tr><td>6</td><td>Scalable Capacity</td><td>Modular STP design supports a wide capacity range from 1 KLD to 10 MLD.</td></tr>
+                                    <tr><td>7</td><td>Energy Efficient</td><td>Smart Power Save mode adjusts operation based on tank filling levels, optimizing energy use.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+                </div>
+
+                <div class="section-band section-4">
+                <!-- SECTION 4: Tech Specs Table -->
+                <div class="row mt-50 mb-50">
+                    <div class="col-lg-12">
+                        <h2 style="font-size: 24px; margin-bottom: 15px;">Advanced Sewage Treatment: Influent & Effluent Characteristics</h2>
+                        <p class="mb-4">We manufacture Sewage Treatment Plants (STP) that effectively treat raw sewage water, reducing BOD, COD, TSS and other pollutants to safe discharge levels.</p>
+                        
+                        <div class="table-responsive">
+                            <table class="custom-table table-orange-header">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th>Unit</th>
+                                        <th>Influent (Raw Sewage)</th>
+                                        <th>Effluent (Treated Water)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>pH</td><td>-</td><td>6.5 – 8.5</td><td>6.5 – 8.5</td></tr>
+                                    <tr><td>BOD</td><td>mg/l</td><td>300</td><td>&lt; 10</td></tr>
+                                    <tr><td>COD</td><td>mg/l</td><td>600</td><td>&lt; 50</td></tr>
+                                    <tr><td>TSS</td><td>mg/l</td><td>300</td><td>&lt; 10</td></tr>
+                                    <tr><td>Oil & Grease</td><td>mg/l</td><td>10 max</td><td>-</td></tr>
+                                    <tr><td>Turbidity</td><td>mg/l</td><td>-</td><td>&lt; 2</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+                </div>
+
+                <div class="section-band section-5">
+                <!-- SECTION 5: Gallery Grid -->
+                <div class="row mt-50">
+                    <div class="col-lg-12">
+                        <h2 style="font-size: 24px;">Explore Our Completed STP Treatment Plant (H2)</h2>
+                        
+                        <div class="gallery-container">
+                            <div class="text-center mb-4">
+                                <h3 style="font-size: 22px; font-weight: bold;">Explore Our Customizable STP Plant Solutions</h3>
+                                <p style="font-size: 14px; max-width: 700px; margin: 0 auto;">We offer a wide range of customizable STP systems, including packaged, MBBR, SBR, and tertiary solutions for efficient treatment and reuse.</p>
+                            </div>
+                            
+                            <div class="row justify-content-center">
+                                <div class="col-lg-2 col-md-4 col-sm-6 col-6 gallery-item"><img src="assets/images/gallery/placeholder.jpg" alt="STP"><p>STP System 500 KLD</p></div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 col-6 gallery-item"><img src="assets/images/gallery/placeholder.jpg" alt="STP"><p>Packaged STP</p></div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 col-6 gallery-item"><img src="assets/images/gallery/placeholder.jpg" alt="STP"><p>STP MBBR System</p></div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 col-6 gallery-item"><img src="assets/images/gallery/placeholder.jpg" alt="STP"><p>STP Blower</p></div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 col-6 gallery-item"><img src="assets/images/gallery/placeholder.jpg" alt="STP"><p>STP 50 KLD</p></div>
+
+                                <div class="col-lg-2 col-md-4 col-sm-6 col-6 gallery-item"><img src="assets/images/gallery/placeholder.jpg" alt="STP"><p>STP Prefab 40 KLD</p></div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 col-6 gallery-item"><img src="assets/images/gallery/placeholder.jpg" alt="STP"><p>Aeration Tank</p></div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 col-6 gallery-item"><img src="assets/images/gallery/placeholder.jpg" alt="STP"><p>STP FRP PSF ACF UV Disinfection</p></div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 col-6 gallery-item"><img src="assets/images/gallery/placeholder.jpg" alt="STP"><p>STP 200 KLD</p></div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 col-6 gallery-item"><img src="assets/images/gallery/placeholder.jpg" alt="STP"><p>STP MBBR System</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                </div>
+
+                <div class="section-band section-6">
+                <!-- SECTION 6: Tabbed Interface -->
+                <div class="row mt-50 mb-50">
+                    <div class="col-lg-12">
+                        <h2 style="font-size: 24px; margin-bottom: 25px;">Trusted Manufacturer and Supply STP for Every Requirement (H2)</h2>
+                        
+                        <div class="row vertical-tabs">
+                            <div class="col-lg-4 col-md-5 mb-4">
+                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                    <a class="nav-link active" id="v-pills-residential-tab" data-toggle="pill" data-bs-toggle="pill" data-target="#v-pills-residential" data-bs-target="#v-pills-residential" href="#v-pills-residential" role="tab">Residential Projects</a>
+                                    
+                                    <a class="nav-link" id="v-pills-commercial-tab" data-toggle="pill" data-bs-toggle="pill" data-target="#v-pills-commercial" data-bs-target="#v-pills-commercial" href="#v-pills-commercial" role="tab">Commercial and Institutional</a>
+                                    
+                                    <a class="nav-link" id="v-pills-industrial-tab" data-toggle="pill" data-bs-toggle="pill" data-target="#v-pills-industrial" data-bs-target="#v-pills-industrial" href="#v-pills-industrial" role="tab">Industrial Applications</a>
+                                    
+                                    <a class="nav-link" id="v-pills-municipal-tab" data-toggle="pill" data-bs-toggle="pill" data-target="#v-pills-municipal" data-bs-target="#v-pills-municipal" href="#v-pills-municipal" role="tab">Municipal and Large-Scale</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-7">
+                                <div class="tab-content" id="v-pills-tabContent">
+                                    <!-- Residential Tab -->
+                                    <div class="tab-pane fade show active" id="v-pills-residential" role="tabpanel" aria-labelledby="v-pills-residential-tab">
+                                        <p>As a trusted sewage treatment plant supplier, we cater to the growing wastewater treatment needs of residential communities</p>
+                                        <ul style="list-style-type: disc; margin-left: 20px; margin-top: 15px;">
+                                            <li>Gated communities are major users of STP systems for daily wastewater treatment</li>
+                                            <li>A community of around 500 units apartments typically requires an STP capacity of 300 to 500 KLD</li>
+                                            <li>Treated water is commonly reused for landscaping, toilet flushing, and road washing</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <!-- Commercial Tab -->
+                                    <div class="tab-pane fade" id="v-pills-commercial" role="tabpanel" aria-labelledby="v-pills-commercial-tab">
+                                        <p>We customize more than 100+ STP to commercial and institutional application as per their requirement.</p>
+                                        <ul style="list-style-type: disc; margin-left: 20px; margin-top: 15px;">
+                                            <li>Hotels, hospitals and office campuses generate mixed wastewater requiring precisely sized systems</li>
+                                            <li>A 200 room hotel typically needs an STP capacity of 100 to 150 KLD</li>
+                                            <li>Hospitals require similar capacities but must handle both sewage and biomedical wastewater.</li>
+                                            <li>Ikon Smart Solutions has delivered STP systems across hospitality and healthcare projects in India</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <!-- Industrial Tab -->
+                                    <div class="tab-pane fade" id="v-pills-industrial" role="tabpanel" aria-labelledby="v-pills-industrial-tab">
+                                        <p>Ikon Smart Solution is a leading STP manufacturer for the industrial sector, especially for pharma, textiles, and major factories and processing units.</p>
+                                        <ul style="list-style-type: disc; margin-left: 20px; margin-top: 15px;">
+                                            <li>Factories and processing units generate effluent based on their production-linked water consumption</li>
+                                            <li>Pharmaceutical units and dairy plants can produce 50 KLD to 100 KLD of high-load effluent daily</li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Municipal Tab -->
+                                    <div class="tab-pane fade" id="v-pills-municipal" role="tabpanel" aria-labelledby="v-pills-municipal-tab">
+                                        <ul style="list-style-type: disc; margin-left: 20px;">
+                                            <li>At city scale, capacity is measured in MLD (Million Liters per Day)</li>
+                                            <li>A municipality serving 50,000 people typically requires a 5 to 7 MLD STP</li>
+                                            <li>Large facilities often use SBR technology to meet CPCB standards for discharge or reuse</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                </div>
+
+                <div class="section-band section-7">
+                <!-- SECTION 7: Advantages (Restructured to match wireframe layout) -->
+                <div class="row mt-50 mb-50">
+                    <div class="col-lg-12 text-center mb-4">
+                        <h2 style="font-size: 20px; color: #666; margin-bottom: 5px;">Why Choose Ikon Smart STP System</h2>
+                        <h3 style="font-size: 24px; font-weight: bold;">Advantages of Ikon Smart Sewage Treatment Plant In India (H2)</h3>
+                    </div>
+                    
+                    <div class="col-lg-12 mb-4">
+                        <p>As an Experienced STP Supply company, we handle end to end service for your STP project from feasibility studies and capacity planning to detailed design, equipment supply, civil work guidance, installation, and commissioning. Ikon smart solution also provides long-term Operation & Maintenance (O&M) support after installation. On top of this, we help with environmental compliance paperwork, including CPCB and SPCB approvals, so you get one single point of contact for the entire project.</p>
+                    </div>
+
+                    <div class="col-lg-12 mb-4">
+                        <div class="wireframe-placeholder" style="background-color: #0088cc; color: #fff; border: none; border-radius: 0; min-height: 200px;">
+                            [ 🖼️ IKON SMART SBR Image Banner Placeholder ]
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <ul style="list-style-type: none; padding-left: 0; font-size: 15px; color: #333; line-height: 1.8;">
+                            <li><i class="fa fa-check text-primary mr-2"></i> Fully automated operation with no dedicated operator required</li>
+                            <li><i class="fa fa-check text-primary mr-2"></i> Odorless operation, suitable for urban and residential environments</li>
+                            <li><i class="fa fa-check text-primary mr-2"></i> Up to 40% power savings due to energy-efficient design</li>
+                            <li><i class="fa fa-check text-primary mr-2"></i> Minimal maintenance with remote monitoring capability</li>
+                            <li><i class="fa fa-check text-primary mr-2"></i> Compact and space-saving modular system design</li>
+                            <li><i class="fa fa-check text-primary mr-2"></i> Consistent treated water quality, always meeting government and pollution control norms</li>
+                            <li><i class="fa fa-check text-primary mr-2"></i> Corrosion-resistant materials ensuring long operational life</li>
+                            <li><i class="fa fa-check text-primary mr-2"></i> Eco-friendly output, allowing reuse of treated water for gardening, flushing, and other non potable applications</li>
+                            <li><i class="fa fa-check text-primary mr-2"></i> Simplified mechanical design with only 2 pumps and 1 blower (compared to 8 or more in conventional systems)</li>
+                            <li><i class="fa fa-check text-primary mr-2"></i> Excellent return on investment (ROI) with low lifecycle cost and high long-term value</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                </div>
+
+                <div class="section-band section-8">
+                <!-- SECTION 8: Process Steps -->
+                <div class="row mt-50 mb-50 pt-4 pb-4" style="background-color: #fafafa; border-radius: 10px;">
+                    <div class="col-lg-12">
+                        <div class="text-center mb-5">
+                            <h2 style="font-size: 28px; font-weight: bold; margin-bottom: 15px;">What We Do Before Manufacturing Your STP</h2>
+                            <p style="max-width: 800px; margin: 0 auto; font-size: 16px; color: #555;">With over 15 years of experience, Ikon Smart Solutions is a trusted company in the design, manufacture, and installation of Advanced sewage treatment systems across India. We follow the steps below before starting manufacturing your STP project.</p>
+                        </div>
+                        
+                        <div class="row justify-content-center">
+                            <!-- Step 1 -->
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="step-card">
+                                    <div class="step-number">01</div>
+                                    <h4 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Estimate Daily Water Consumption</h4>
+                                    <p style="font-size: 15px; color: #666;">We calculate per capita water usage based on PCB guidelines or local municipal norms. For residential buildings, the standard estimate is 135 litres per person per day.</p>
+                                </div>
+                            </div>
+                            <!-- Step 2 -->
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="step-card">
+                                    <div class="step-number">02</div>
+                                    <h4 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Calculate Sewage Generation</h4>
+                                    <p style="font-size: 15px; color: #666;">Sewage generation is typically 80% of total water supply. For example, a residential complex with 500 people consuming 135 litres each would generate approximately 54,000 litres (54 KLD) of sewage daily.</p>
+                                </div>
+                            </div>
+                            <!-- Step 3 -->
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="step-card">
+                                    <div class="step-number">03</div>
+                                    <h4 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Apply a Safety (Peak) Factor</h4>
+                                    <p style="font-size: 15px; color: #666;">To handle peak-hour loads without disrupting the treatment process, we design plants with a safety margin of 1.25x to 1.5x the average daily flow.</p>
+                                </div>
+                            </div>
+                            <!-- Step 4 -->
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="step-card">
+                                    <div class="step-number">04</div>
+                                    <h4 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Verify Local Compliance Norms</h4>
+                                    <p style="font-size: 15px; color: #666;">We check the minimum STP capacity required by local building approval authorities or environmental clearance conditions, since some states mandate specific KLD capacities based on plot size or unit count.</p>
+                                </div>
+                            </div>
+                            <!-- Step 5 -->
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="step-card">
+                                    <div class="step-number">05</div>
+                                    <h4 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Get Expert Guidance</h4>
+                                    <p style="font-size: 15px; color: #666;">For larger or more complex projects, especially those requiring MLD-scale capacity our team at Ikon Smart Solutions ensures your plant is accurately sized, fully compliant and built to handle future growth.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                </div>
+
+                <div class="section-band section-9">
+                <!-- SECTION 9: Customized STP Manufacturers (NEW) -->
+                <div class="row align-items-center mt-50 mb-50">
+                    <div class="col-lg-8 col-md-7 pr-lg-4">
+                        <h2 style="font-size: 24px; font-weight: bold; margin-bottom: 15px;">Customized STP Manufacturers in India</h2>
+                        <p style="margin-bottom: 15px;">At Ikon Smart Solutions, we understand every project is different according to its own space constraints, wastewater characteristics and regulatory requirements. As a leading customized STP manufacturer in India, we design and build customized sewage treatment plants tailored to residential, commercial and industrial needs.</p>
+                        
+                        <p style="margin-bottom: 15px;">Our engineering team begins with a detailed assessment of daily sewage generation, influent characteristics, available space for STP plant installation and local compliance norms. Based on this assessment, we configure the STP plant's capacity, layout from compact modular units for space-constrained urban sites to large-scale SBR based systems for high-load industrial applications.</p>
+                        
+                        <p style="margin-bottom: 25px;">With over 15 years of experience and ISO certification STP Company, we manufacture and supply STP systems ranging from 1 KLD to 10 MLD, ensuring the solution fits your exact requirements. Based in Bangalore, we deliver these tailored, future-ready custom STP solutions to clients across India.</p>
+                        
+                        <div class="custom-buttons">
+                            <a href="tel:+918778627795" class="theme-btn btn-two">Call us</a>
+                            <a href="contact.php" class="theme-btn btn-two">Get A quote</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-5 mt-4 mt-md-0">
+                        <div class="wireframe-placeholder" style="border-radius: 20px; min-height: 300px;">
+                            [ 🖼️ Image Placeholder ]
+                        </div>
+                    </div>
+                </div>
+
+
+                </div>
+
+                <div class="section-band section-10">
+                <!-- SECTION 10: Our Clients (NEW) -->
+        <!-- growth-section -->
+        <section class="growth-section">
+            <div class="pattern-layer" style="background-color: #eee;"></div>
+            <div class="auto-container">
+
+               
+                
+                <div class="clients-section">
+                     <div class="sec-title centred"> 
+                    <h2 class="text-primary">Our Clients</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3 col-6 mb-4">
+                        <img src="assets/images/clients/1.webp" class="b-rad-10" alt="">
+                    </div>
+                    <div class="col-lg-3 col-6 mb-4">
+                        <img src="assets/images/clients/2.webp" class="b-rad-10" alt="">
+                    </div>
+                    <div class="col-lg-3 col-6 mb-4">
+                        <img src="assets/images/clients/3.webp" class="b-rad-10" alt="">
+                    </div>
+                    <div class="col-lg-3 col-6 mb-4">
+                        <img src="assets/images/clients/4.webp" class="b-rad-10" alt="">
+                    </div>
+                    <div class="col-lg-3 col-6 mb-4">
+                        <img src="assets/images/clients/5.webp" class="b-rad-10" alt="">
+                    </div>
+                    <div class="col-lg-3 col-6 mb-4">
+                        <img src="assets/images/clients/6.webp" class="b-rad-10" alt="">
+                    </div>
+                    <div class="col-lg-3 col-6 mb-4">
+                        <img src="assets/images/clients/7.webp" class="b-rad-10" alt="">
+                    </div>
+                    <div class="col-lg-3 col-6 mb-4">
+                        <img src="assets/images/clients/8.webp" class="b-rad-10" alt="">
+                    </div>
+                    <div class="col-lg-3 col-6 mb-4">
+                        <img src="assets/images/clients/9.webp" class="b-rad-10" alt="">
+                    </div>
+                    <div class="col-lg-3 col-6 mb-4">
+                        <img src="assets/images/clients/10.webp" class="b-rad-10" alt="">
+                    </div>
+                    <div class="col-lg-3 col-6 mb-4">
+                        <img src="assets/images/clients/11.webp" class="b-rad-10" alt="">
+                    </div>
+                    <div class="col-lg-3 col-6 mb-4">
+                        <img src="assets/images/clients/12.webp" class="b-rad-10" alt="">
+                    </div>
+                    <div class="col-lg-3 col-6 mb-4">
+                        <img src="assets/images/clients/13.webp" class="b-rad-10" alt="">
+                    </div>
+                    <div class="col-lg-3 col-6 mb-4">
+                        <img src="assets/images/clients/14.webp" class="b-rad-10" alt="">
+                    </div>
+                    <div class="col-lg-3 col-6 mb-4">
+                        <img src="assets/images/clients/15.webp" class="b-rad-10" alt="">
+                    </div>
+                </div>
+
+                    
+                     
+                </div>
+            </div>
+        </section>
+        <!-- growth-section end -->
+
+
+
+                </div>
+
+                <div class="section-band section-11">
+                <!-- SECTION 11: FAQs Accordion (NEW) -->
+                <div class="row mt-50 mb-50">
+                    <div class="col-lg-12">
+                        <h2 style="font-size: 24px; font-weight: bold; margin-bottom: 25px;">STP Manufacturer FAQs (H2)</h2>
+                        
+                        <div class="accordion faq-accordion" id="stpfaqAccordion">
+                            <!-- FAQ 1 -->
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#collapseOne" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Do you offer STP revamping and upgrading services?
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#stpfaqAccordion" data-bs-parent="#stpfaqAccordion">
+                                    <div class="card-body">
+                                        Yes. As an STP manufacturer and supplier in India, we also provide revamping and upgrading services designed to boost your Sewage treatment plant's capacity, treatment efficiency and overall performance which help you meet current regulatory standards without the cost of a full replacement. With 50+ successful STP revamping projects completed across India, we bring proven expertise to every upgrade.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- FAQ 2 -->
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#collapseTwo" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            What Makes Ikon Smart Solution the Best STP Manufacturer in India?
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#stpfaqAccordion" data-bs-parent="#stpfaqAccordion">
+                                    <div class="card-body">
+                                        Our sewage treatment plants use advanced SBR technology, offering high efficiency in a compact, modular design. Fully automated with minimal manual operation, our systems are supported by excellent operation and maintenance service, with strategically located pumps for easy access and servicing. Our dedicated team ensures precise installation and is always ready to resolve issues quickly.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- FAQ 3 -->
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#collapseThree" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Do you manufacture STP for the industrial sector?
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#stpfaqAccordion" data-bs-parent="#stpfaqAccordion">
+                                    <div class="card-body">
+                                        Yes, we manufacture standard and customized STP systems and supply various industrial sectors, including pharmaceuticals, textiles, food & beverage, chemicals, and other factories and processing units. Our systems are designed to handle industrial wastewater loads ranging up to several MLD.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 4 -->
+                            <div class="card">
+                                <div class="card-header" id="headingFour">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#collapseFour" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            How long does it take to install a packaged STP?
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#stpfaqAccordion" data-bs-parent="#stpfaqAccordion">
+                                    <div class="card-body">
+                                        Normally installation timeline for a packaged STP depends on plant capacity, site accessibility and civil work readiness. Since our STP units are prefabricated and factory tested, on-site installation is much faster than conventional STPs. So it is typically completed within a few days to a couple of weeks.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 5 -->
+                            <div class="card">
+                                <div class="card-header" id="headingFive">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#collapseFive" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                            What is SBR technology in STP?
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#stpfaqAccordion" data-bs-parent="#stpfaqAccordion">
+                                    <div class="card-body">
+                                        SBR stands for Sequencing Batch Reactor. Unlike most treatment technologies that run as a continuous flow wastewater moving from one tank to the next, SBR runs all treatment stages inside a single tank on a timed cycle. The working cycle has five phases: Fill, React, Settle, Decant, and Idle.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 6 -->
+                            <div class="card">
+                                <div class="card-header" id="headingSix">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#collapseSix" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                            Where is your STP manufacturing Yard located, and where do you operate from?
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#stpfaqAccordion" data-bs-parent="#stpfaqAccordion">
+                                    <div class="card-body">
+                                        Our design, engineering and project management teams are located in the Bangalore head office. STP Manufacturing happens at our Hosur facility in Tamil Nadu and we supply Advance SBR STPs to various location across India from metro cities to Tier-2 towns.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- footer-style-four -->
+        <section class="footer-style-four">
+            <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-43.png);"></div>
+            <div class="auto-container">
+                <div class="footer-bottom">
+                    <div class="bottom-inner">
+                        <div class="left-column">
+                            <p>&copy; <span id="current-year"></span> Ikon Smart Solutions, All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <!-- jquery plugins -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/validation.js"></script>
+    <script src="assets/js/jquery.fancybox.js"></script>
+    <script src="assets/js/appear.js"></script>
+    <script src="assets/js/scrollbar.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/nav-tool.js"></script>
+    <script src="assets/js/jquery.lettering.min.js"></script>
+    <script src="assets/js/jquery.circleType.js"></script>
+    <script src="assets/js/bxslider.js"></script>
+
+    <!-- main-js -->
+    <script src="assets/js/script.js"></script>
+
+    <script>
+    const d = new Date();
+    let year = d.getFullYear();
+    document.getElementById("current-year").innerHTML = year;
+    
+    $(document).ready(function(){
+        // Force the vertical tabs to switch on click (Fallback)
+        $('#v-pills-tab .nav-link').on('click', function (e) {
+            e.preventDefault();
+            
+            // Remove active classes from all links and tab panes
+            $('#v-pills-tab .nav-link').removeClass('active');
+            $('.tab-pane').removeClass('show active');
+            
+            // Add active class to the clicked link
+            $(this).addClass('active');
+            
+            // Show the corresponding tab pane
+            var target = $(this).attr('href');
+            $(target).addClass('show active');
+        });
+    });
+    </script>
+</body>
+</html>
