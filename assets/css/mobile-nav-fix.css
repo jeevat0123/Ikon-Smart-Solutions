@@ -1,0 +1,32 @@
+/* Mobile dropdown styles */
+.mobile-menu .navigation li.dropdown > a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-menu .navigation li.dropdown .dropdown-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    margin-left: 8px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.mobile-menu .navigation li.dropdown.open > a .dropdown-btn i {
+    transform: rotate(180deg);
+}
+
+.mobile-menu .navigation li.dropdown > ul {
+    display: none;
+    padding-left: 15px;
+}
+
+.mobile-menu .navigation li.dropdown > ul > li > a {
+    font-size: 0.9em;
+    opacity: 0.85;
+}

@@ -153,6 +153,19 @@
                                         <li><a href="index.html">Home</a></li> 
                                         <li><a href="about.html">About Us</a></li> 
                                         <li><a href="scope-of-services.html">Scope of Services</a></li>
+                                        <li class="dropdown">
+                                        <a href="#">Services</a>
+                                        <ul>
+                                        <li class="dropdown">
+                                        <a href="waste_water_treatment_manufacturer.html">Waste Water Management</a>
+                                        <ul>
+                                        <li><a href="sewage_treatment_plant.html">Sewage Treatment Plant (STP)</a></li>
+                                        <li><a href="effluent_treatment_plant.html">Industrial Effluent Treatment Plant (ETP)</a></li>
+                                        <li><a href="zero.html">Zero Liquid Discharge</a></li>
+                                        </ul>
+                                        </li>
+                                        </ul>
+                                        </li>
                                         <li><a href="manufacturing-facilities.html">Manufacturing Facilities</a></li>
                                         <li><a href="design-engineering.html">Design Engineering </a></li>
                                         <li><a href="installation.html">Installation </a></li>
