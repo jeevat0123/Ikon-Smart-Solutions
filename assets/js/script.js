@@ -49,14 +49,19 @@
 		$('.mobile-menu .menu-box .menu-outer').append(mobileMenuContent);
 		$('.sticky-header .main-menu').append(mobileMenuContent);
 		
-		//Dropdown Button
-		$('.mobile-menu li.dropdown .dropdown-btn').on('click', function() {
-			$(this).toggleClass('open');
-			$(this).prev('ul').slideToggle(500);
+		//Keep the parent page reachable: its link becomes the first item in its own submenu
+		$('.mobile-menu li.dropdown > a[href!="#"]').each(function() {
+			var $a = $(this);
+			$a.siblings('ul').prepend('<li><a href="' + $a.attr('href') + '">' + $a.text() + ' Overview</a></li>');
 		});
-		//Dropdown Button
-		$('.mobile-menu li.dropdown .dropdown-btn').on('click', function() {
-			$(this).prev('.megamenu').slideToggle(900);
+
+		//Dropdown Button (delegated so it works on touch and for nested items)
+		$('.mobile-menu').on('click', 'li.dropdown > .dropdown-btn, li.dropdown > a', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			var $li = $(this).closest('li.dropdown');
+			$li.children('.dropdown-btn').toggleClass('open');
+			$li.children('ul, .megamenu').stop(true, true).slideToggle(300);
 		});
 		//Menu Toggle Btn
 		$('.mobile-nav-toggler').on('click', function() {
