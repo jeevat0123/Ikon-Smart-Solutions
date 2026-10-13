@@ -3,7 +3,7 @@ name: Deploy to FTP
 on:
   push:
     branches: [main]
-  workflow_dispatch:
+  workflow_dispatch:   # manual run = full sync of every file
 
 concurrency:
   group: ftp-deploy
@@ -21,22 +21,39 @@ jobs:
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
 
-      - name: Restore file modified times from git
-        run: pip install git-restore-mtime && git restore-mtime
-
-      - name: Upload via lftp
+      - name: Deploy changed files
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USER: ${{ secrets.FTP_USER }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           FTP_DIR: ${{ secrets.FTP_DIR }}
+          BEFORE: ${{ github.event.before }}
         run: |
-          lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" <<LFTP
-          set ssl:verify-certificate no
-          mirror -R --only-newer --verbose \
-            --exclude-glob .git/ --exclude-glob .github/ \
-            --exclude-glob README.md --exclude-glob deploy.sh \
-            --exclude-glob .deploy.env --exclude-glob .gitignore \
-            . ${FTP_DIR:-/public_html/}
-          bye
-          LFTP
+          set -euo pipefail
+          DIR="${FTP_DIR:-/public_html/}"; DIR="${DIR%/}"
+          SKIP='^(\.github/|README\.md$|deploy\.sh$|\.deploy\.env$|\.gitignore$)'
+          CMDS=cmds.lftp
+          { echo "set ssl:verify-certificate no"; echo "set cmd:fail-exit yes"; } > "$CMDS"
+
+          # Changed files since the previous push; otherwise (manual run / first push) everything.
+          if [ "${GITHUB_EVENT_NAME}" = push ] && [ "$BEFORE" != 0000000000000000000000000000000000000000 ] \
+             && git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            git diff --name-status --no-renames "$BEFORE" "$GITHUB_SHA" > changes.txt
+          else
+            git ls-files | sed 's/^/A\t/' > changes.txt
+          fi
+
+          while IFS=$'\t' read -r status file; do
+            [[ "$file" =~ $SKIP ]] && continue
+            d="$(dirname "$file")"; [ "$d" = . ] && d=""
+            if [ "$status" = D ]; then
+              echo "rm -f \"$DIR/$file\"" >> "$CMDS"
+            else
+              echo "mkdir -p \"$DIR/$d\"" >> "$CMDS"
+              echo "put -O \"$DIR/$d\" \"$file\"" >> "$CMDS"
+            fi
+          done < changes.txt
+
+          echo "bye" >> "$CMDS"
+          echo "--- Changes ---"; cat changes.txt
+          lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" -f "$CMDS"
