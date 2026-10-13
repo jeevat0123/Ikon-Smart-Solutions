@@ -23,8 +23,11 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ${{ secrets.FTP_DIR }}
+          protocol: ftps
+          timeout: 120000
           exclude: |
             **/.git*
             **/.git*/**
             .github/**
             README.md
+            deploy.sh
