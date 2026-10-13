@@ -54,4 +54,4 @@ jobs:
 
           echo "bye" >> "$CMDS"
           echo "--- Changes ---"; cat changes.txt
-          lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" -f "$CMDS"
+          lftp -u "$FTP_USER","$FTP_PASSWORD" -e "source $CMDS" "$FTP_HOST"
