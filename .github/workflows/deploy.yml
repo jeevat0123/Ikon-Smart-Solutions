@@ -45,12 +45,10 @@ jobs:
 
           while IFS=$'\t' read -r status file; do
             [[ "$file" =~ $SKIP ]] && continue
-            d="$(dirname "$file")"; [ "$d" = . ] && d=""
             if [ "$status" = D ]; then
               echo "rm -f \"$DIR/$file\"" >> "$CMDS"
             else
-              echo "mkdir -p \"$DIR/$d\"" >> "$CMDS"
-              echo "put -O \"$DIR/$d\" \"$file\"" >> "$CMDS"
+              echo "put -d \"$file\" -o \"$DIR/$file\"" >> "$CMDS"
             fi
           done < changes.txt
 
