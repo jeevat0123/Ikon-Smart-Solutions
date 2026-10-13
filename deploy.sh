@@ -7,7 +7,7 @@ lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" <<LFTP
 set ssl:verify-certificate no
 mirror -R --only-newer --verbose \
   --exclude-glob .git/ --exclude-glob .github/ \
-  --exclude-glob README.md --exclude-glob deploy.sh --exclude-glob .deploy.env \
+  --exclude-glob README.md --exclude-glob deploy.sh --exclude-glob .deploy.env --exclude-glob .gitignore \
   . ${FTP_DIR:-/public_html/}
 bye
 LFTP
