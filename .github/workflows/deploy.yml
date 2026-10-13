@@ -48,7 +48,7 @@ jobs:
             if [ "$status" = D ]; then
               echo "rm -f \"$DIR/$file\"" >> "$CMDS"
             else
-              echo "put -d \"$file\" -o \"$DIR/$file\"" >> "$CMDS"
+              echo "mput -d -O \"$DIR\" \"$file\"" >> "$CMDS"
             fi
           done < changes.txt
 
