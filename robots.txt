@@ -1,0 +1,3 @@
+Allow: /
+
+Sitemap: https://www.ikonsmartsolutions.com/sitemap.xml
