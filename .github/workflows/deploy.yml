@@ -15,9 +15,14 @@ jobs:
     environment: ikonsmarts
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
+
+      - name: Restore file modified times from git
+        run: pip install git-restore-mtime && git restore-mtime
 
       - name: Upload via lftp
         env:
